@@ -20,38 +20,38 @@ function generatePassword() {
     const upper = confirm('Do you want upper case letters?');
     const lower = confirm('Do you want lower case letters?');
     const special = confirm('Do you want special characters?');
-    const length = prompt("How long do you want the password to be? (Must be 8-128 characters)");
+    var charlength = prompt("How long do you want the password to be? (Must be 8-128 characters)");
     
-    var all = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_~[]?;:{}'
+    var charPool = ""
     var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     var lowerCase = 'abcdefghijklmnopqrstuvwxyz'
     var numeric = '0123456789'
-    var char = '!@#$%^&*()_~[]?;:{}'
+    var specChar = '!@#$%^&*()_~[]?;:{}'
 
-    if (numbers){
-        for(var i=0; i < length; i++){
-            password += numeric.charAt(Math.floor(Math.random() * numeric.length));
-        }
-    }
-    if (upper){
-        for(var i=0; i < length; i++){
-            password += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
-        }
-    }
-    if (lower) {
-        for(var i=0; i < length; i++){
-            password += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
-        }
-    }
-    if (special){
-        for(var i=0; i < length; i++){
-            password += char.charAt(Math.floor(Math.random() * char.length));
-        }
+    if (numbers) {
+        password +=
+        charPool.concat(numeric); // Now charPool contains all numeric chars
     }
 
     if (upper) {
-        passwordChars.concat(upperCase); // Now passwordChars contains all uppercase chars
-       }
+        password +=
+        charPool.concat(upperCase); // Now charPool contains all uppercase chars
+    }
+
+    if (lower) {
+        password +=
+        charPool.concat(lowerCase); // Now charPool contains all lowercase chars
+       
+    }
+
+    if (special) {
+        password+=
+        charPool.concat(specChar); // Now charPool contains all special chars
+    }
+
+    for(var i=0; i < length; i++){
+        password += charPool.charAt(Math.floor(Math.random() * charPool.length));
+    }
 
   return password;
 }
