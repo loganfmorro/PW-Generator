@@ -22,6 +22,7 @@ function generatePassword() {
     const special = confirm('Do you want special characters?');
     const length = prompt("How long do you want the password to be? (Must be 8-128 characters)");
     
+    var all = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_~[]?;:{}'
     var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     var lowerCase = 'abcdefghijklmnopqrstuvwxyz'
     var numeric = '0123456789'
@@ -47,6 +48,10 @@ function generatePassword() {
             password += char.charAt(Math.floor(Math.random() * char.length));
         }
     }
+
+    if (upper) {
+        passwordChars.concat(upperCase); // Now passwordChars contains all uppercase chars
+       }
 
   return password;
 }
