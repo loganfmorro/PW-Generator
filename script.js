@@ -15,18 +15,18 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
-    //Command Prompts for password criteria
+    //Confirm and Prompts for password criteria
     let password = '';
     const numbers = confirm('Do you want numbers?');
     const upper = confirm('Do you want upper case letters?');
     const lower = confirm('Do you want lower case letters?');
     const special = confirm('Do you want special characters?');
     const charlength = prompt("How long do you want the password to be? (Must be 8-128 characters)");
+    //If the length number entered doesn't meet requirements, page refreshes
     if (charlength != Number && charlength < 8 || charlength > 128) {
         alert ("You have not entered a valid number, please try again and enter a number between 8 and 128");
         setTimeout(function(){ location.reload(); }, 0000);
     }
-    
     
     //Criteria Strings for Password
     var charPool = ""
@@ -59,7 +59,7 @@ function generatePassword() {
     }
 
     for(var i=0; i < charlength; i++){
-        password += charPool.charAt(Math.floor(Math.random() * charPool.length));
+        password += charPool.charAt(Math.floor(Math.random() * charPool.length)); //looping all criteria included to generate random password
     }
 
   return password;
