@@ -12,7 +12,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-    
+
 function generatePassword() {
 
     //Command Prompts for password criteria
@@ -22,7 +22,11 @@ function generatePassword() {
     const lower = confirm('Do you want lower case letters?');
     const special = confirm('Do you want special characters?');
     const charlength = prompt("How long do you want the password to be? (Must be 8-128 characters)");
-        
+    if (charlength != Number && charlength < 8 || charlength > 128) {
+        alert ("You have not entered a valid number, please try again and enter a number between 8 and 128");
+        setTimeout(function(){ location.reload(); }, 0000);
+    }
+    
     
     //Criteria Strings for Password
     var charPool = ""
@@ -31,14 +35,7 @@ function generatePassword() {
     var numeric = '0123456789'
     var specChar = '!@#$%^&*()_~[]?;:{}'
 
-    if (charlength >= 8 && charlength <= 128){
-        ()
-    }
-
-    else {
-        alert("Number is out of the range. Please choose a number between 8 and 128");
-        prompt("Choose a length of at least 8 characters and no more than 128 characters. Type your number");
-        } 
+   
 
     if (numbers) {
    
