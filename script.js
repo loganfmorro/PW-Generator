@@ -20,7 +20,7 @@ function generatePassword() {
     const upper = confirm('Do you want upper case letters?');
     const lower = confirm('Do you want lower case letters?');
     const special = confirm('Do you want special characters?');
-    var charlength = prompt("How long do you want the password to be? (Must be 8-128 characters)");
+    const charlength = prompt("How long do you want the password to be? (Must be 8-128 characters)");
     
     var charPool = ""
     var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -29,27 +29,27 @@ function generatePassword() {
     var specChar = '!@#$%^&*()_~[]?;:{}'
 
     if (numbers) {
-        password +=
-        charPool.concat(numeric); // Now charPool contains all numeric chars
+   
+        charPool+=numeric; // Now charPool contains all numeric chars
     }
 
     if (upper) {
-        password +=
-        charPool.concat(upperCase); // Now charPool contains all uppercase chars
+  
+        charPool+=upperCase; // Now charPool contains all uppercase chars
     }
 
     if (lower) {
-        password +=
-        charPool.concat(lowerCase); // Now charPool contains all lowercase chars
+      
+        charPool+=lowerCase; // Now charPool contains all lowercase chars
        
     }
 
     if (special) {
-        password+=
-        charPool.concat(specChar); // Now charPool contains all special chars
+
+        charPool+=specChar; // Now charPool contains all special chars
     }
 
-    for(var i=0; i < length; i++){
+    for(var i=0; i < charlength; i++){
         password += charPool.charAt(Math.floor(Math.random() * charPool.length));
     }
 
