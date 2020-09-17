@@ -1,11 +1,11 @@
 # Password Generator Screen Shots
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.11.42 PM.png)
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.11.52 PM.png)
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.01 PM.png)
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.09 PM.png)
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.18 PM.png)
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.25 PM.png)
-(Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.43 PM.png)
+![Screenshot1](Read Me Screenshots/Screen Shot 2020-09-16 at 10.11.42 PM.png)
+![Screenshot2](Read Me Screenshots/Screen Shot 2020-09-16 at 10.11.52 PM.png)
+![Screenshot3](Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.01 PM.png)
+![Screenshot4](Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.09 PM.png)
+![Screenshot5](Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.18 PM.png)
+![Screenshot6](Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.25 PM.png)
+![Screenshot7](Read Me Screenshots/Screen Shot 2020-09-16 at 10.12.43 PM.png)
 
 
 # How it works
